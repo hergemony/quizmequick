@@ -16,6 +16,14 @@ body {
 
 }
 
+#instructions {
+    background-color: beige;
+    margin-left: 10%;
+    text-align: left;
+    font-size: x-small;
+
+}
+
 /* styles for original hergemony brand footer */
 
 #footer {

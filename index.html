@@ -12,9 +12,14 @@
     <link rel="stylesheet" type="text/css" href="assets/style.css">
 
 </head>
+
+
 <!-- This is the body -->
 
 <body>
+    <!-- Link to highscores page -->
+    <a href="highscores.html">View Highscores</a>
+
     <!-- This is the wrapper container with all the content -->
     <div id="wrapper">
         <header>
@@ -22,7 +27,16 @@
         </header>
         <!-- This is the content area -->
         <div id="content">
-            <h2>Instructions</h2>
+            <h2>INSTRUCTIONS</h2>
+        <div id="instructions">
+        <h3>
+        You have 60 seconds to answer as many questions as possible. Time will be subtracted if you get an incorrect answer. Click "START QUIZ" when ready. Quiz will stop when time is up. You can try again by clicking "PLAY AGAIN". You can view your best scores at the end. GOOD LUCK!
+            </h3>
+<!-- This is the timer -->
+<div id="currentTime"></div>
+
+<!-- This is the quiz content/questions -->
+
         <!-- This is the div for the buttons -->
         <div id="btn">
             <!-- This is the GO button to start the timer -->
@@ -36,7 +50,7 @@
 
 
     <!-- This is the Javascript document -->
-    <script src="script.js"></script>
+    <script src="questions.js"></script>
 
 </body>
 
