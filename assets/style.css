@@ -1,0 +1,24 @@
+/* Hergemony - "QUIZ ME QUICK" */
+/* Styles for body */
+body {
+    background-color: plum;
+    margin: 0 auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: navy;
+    text-align: center;
+}
+
+/* Styles for wrapper div */
+#wrapper {
+    background-color:beige;
+    margin-left: 0%;
+    padding-bottom: 50px;
+
+}
+
+/* styles for original hergemony brand footer */
+
+#footer {
+    text-align: center;
+    font-size: 8px;
+  }
