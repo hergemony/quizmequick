@@ -8,6 +8,10 @@ This is a timed quiz designed to test the user's ability to answer a set questio
 
 Questions are of a general topic.
 
+Thanks to the following sources:
+
+https://www.quizbreaker.com/trivia-questions
+
 
 
 
@@ -21,5 +25,5 @@ Deployed Application Link => https://hergemony.github.io/quizmequick/
 
 ❤ Hergemony™ Digital Services 2022 ❤
 
-Acknowledgments The Teachers, Tutors and Team @ UWA CODING BOOTCAMP
+Acknowledgments: The Teachers, Tutors and Team @ UWA CODING BOOTCAMP
 

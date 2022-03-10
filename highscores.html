@@ -6,9 +6,38 @@
     <!-- In order to make the document responsive we need to scale items to screen -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Insert title -->
-    <title> HIGH SCORES </title>
+    
     <!-- These are the CSS style links -->
     <link rel="stylesheet" type="text/css" href="assets/style.css">
+<!-- Insert title -->
+    <title> HIGH SCORES </title>
 
 </head>
+
+<body>
+    <!-- This is the wrapper for the main container in the high scores page -->
+<div id="wrapper">
+<!-- Include a div fo the timer -->
+<div id="currentTime"></div>
+<!-- Include a div for the quiz content -->
+<div id="questionsDiv">
+    <h1>DID YOU SCORE? 🥇🥈🥉</h1>
+    <ul id="highScore"></ul>
+
+    <!-- Add buttons for user to navigate page -->
+    <button id="goBack">GO BACK 🔙 </button>
+    <button id="clear" value="reset">CLEAR HIGH SCORES 🗑️</button>
+</div>
+</div>
+
+<script src="highscores.js"></script>
+
+</body>
+
+<!-- This is the original hergemony brand footer -->
+<footer>
+    <div id="footer">
+        <h1> ❤ Hergemony™ Digital Services 2022 ❤</h1>
+    </div>
+</footer>
+</html>
