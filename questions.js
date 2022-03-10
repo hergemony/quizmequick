@@ -49,6 +49,8 @@ var questionIndex = 0;
 
 // Start working code
 // Work with declared variables
+// Using DOM query selectors to add timer
+
 var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
@@ -56,6 +58,45 @@ var wrapper = document.querySelector("wrapper");
 
 // Seconds left is 10 seconds per question
 
+
 var secondsLeft = 76
+
+// need to add event listener for timer
+// button needs to trigger timer and display time on screen for user
+
+timer.addEventListener("click", function () {
+    // We need to set the timer to zero at the beginning; check for this
+    if (holdInterval === 0) {
+        holdInterval = setInterval(function () {
+    }
+});
+
+// Render question and choices to the page
+
+
+// clear existing question and render next question
+
+// create a loop to loop through questions in the array
+
+// NOTE we can only append question title only
+
+// then have answer appear after user has selected a response
+
+// Create an event to compare the user's response with the correct answer
+
+// Use if else statements to deduct time
+
+// Include a tally of questions answered?
+
+// Append last page
+
+
+// Event listener for user to enter initials to be entered into local storage
+// Local Storage to contain initials and score
+
+
+// Navigate user back to main page
+
+// QUIZ COMPLETE
 
 
