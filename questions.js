@@ -1,5 +1,5 @@
 // Hergemony Quiz
-// Var with array and object for questions
+// Create a variable with array and object for questions
 var questions = [
     {
         title: "How many countries are there in the world?",
@@ -57,30 +57,87 @@ var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("wrapper");
 
 // Seconds left is 10 seconds per question
-
-
 var secondsLeft = 76
+// Holds interval time
+var holdInterval = 0;
+// Holds penalty time
+var penalty = 10;
+// Create a new element
+var ulCreate = document.createElement("ul");
 
-// need to add event listener for timer
+// need to add event listener for TIMER
 // button needs to trigger timer and display time on screen for user
 
 timer.addEventListener("click", function () {
     // We need to set the timer to zero at the beginning; check for this
     if (holdInterval === 0) {
         holdInterval = setInterval(function () {
+            secondsLeft--;
+            currentTime.textContent = "Time: " + secondsLeft;
+
+            if (secondsLeft <= 0) {
+                clearInterval(holdInterval);
+                allDone();
+                currentTime.textContent = "Time: " + secondsLeft;
+
+                if (secondsLeft <= 0) {
+                    clearInterval(holdInterval);
+                    allDone();
+                    currentTime.textContent = "Time's Up!";
+                }
+            }, 1000);
     }
+    render(questionIndex);
 });
 
-// Render question and choices to the page
 
-
+// Render question and choices to the page:
+function render(questionIndex) {
 // clear existing question and render next question
-
+questionsDiv.innerHTML = "";
+ulCreate.innerHTML = "";
 // create a loop to loop through questions in the array
+for (var i = 0; i < questions.length; i++) {
+    // Appends question title only
+    var userQuestion = questions[questionIndex].title;
+    var userChoices = questions[questionIndex].choices;
+    questionsDiv.textContent = userQuestion;
+}
+// New for each of the question choices
+userChoices.forEach(function (newItem) {
+    var listItem = document.createElement("li");
+    listItem.textContent = newItem;
+    questionsDiv.appendChild(ulCreate);
+    ulCreate.appendChild(listItem);
+    listItem.addEventListener("click", (compare));
+})
+}
+
+// Create an event to compare choices with answer
+function compare(event) {
+    var element = event.target;
+
+    if (element.matches("li")) {
+
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+        // Correct condition
+        if (element.textContent == questions[questionIndex].answer) {
+            score++;
+            createDiv.textContent = "Correct! The answer is: " + questions[questionIndex].answer;
+
+        }
+
+
+    }
+}
+
 
 // NOTE we can only append question title only
 
 // then have answer appear after user has selected a response
+
+
 
 // Create an event to compare the user's response with the correct answer
 
