@@ -2,55 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
-    <!-- In order to make the document responsive we need to scale items to screen -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Insert title -->
-    <title> QUIZ ME QUICK </title>
-    <!-- These are the CSS style links -->
+    <meta charset="UTF-8">
+    <!-- This is the first step in making the document responsive but scaling the items to screen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- This is the style links -->
     <link rel="stylesheet" type="text/css" href="assets/style.css">
 
+    <!-- This is the title-->
+    <title>Code Quiz</title>
 </head>
 
-
-<!-- This is the body -->
-
 <body>
-    <!-- Link to highscores page -->
-    <a href="highscores.html">View Highscores</a>
-
-    <!-- This is the wrapper container with all the content -->
+    <!-- Link to highscores -->
+    <a href="highScores.html">View Highscores</a>
+    <!-- This is a wrapper -->
     <div id="wrapper">
-        <header>
+        <!-- Div for timer -->
+        <div id="currentTime"></div>
+        <!-- Div for quiz content -->
+        <div id="questionsDiv">
             <h1>QUIZ ME QUICK 🧠❓💋</h1>
-        </header>
-        <!-- This is the content area -->
-        <div id="content">
-            <h2>INSTRUCTIONS</h2>
-        <div id="instructions">
-        <h3>
-        You have 60 seconds to answer as many questions as possible. Time will be subtracted if you get an incorrect answer. Click "START QUIZ" when ready. Quiz will stop when time is up. You can try again by clicking "PLAY AGAIN". You can view your best scores at the end. GOOD LUCK!
-            </h3>
-<!-- This is the timer -->
-<div id="currentTime"></div>
-
-<!-- This is the quiz content/questions -->
-
-        <!-- This is the div for the buttons -->
-        <div id="btn">
-            <!-- This is the GO button to start the timer -->
-            <button id="go"> START QUIZ ⏲️ </button>
-            <!-- This is the submit response button -->
-            <button id="submit"> SUBMIT RESPONSE 🗒️ </button>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+                answers
+                will penalize your score/time by ten seconds!</p>
+            <ul id="choicesUl"></ul>
+            <!-- Buttons -->
+            <button id="startTime">Start Quiz</button>
         </div>
-        </div>
-    
+
     </div>
 
 
-    <!-- This is the Javascript document -->
     <script src="questions.js"></script>
+
 
 </body>
 

@@ -16,6 +16,14 @@ https://www.quizbreaker.com/trivia-questions
 
 
 
+FEATURES:
+- Two HTML pages
+index.html
+highscores.html
+- One CSS styles page
+styles.css
+- Two Javascript pages which contains variables including arrays with object, event listeners, if/else statements, for loops, functions, local storage using JSON parse and JSON stringify and sort function.
+
 Thanks for playing *QUIZ ME QUICK!*
 
 Github Profile Link => https://github.com/hergemony
