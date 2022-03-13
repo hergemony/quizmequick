@@ -23,8 +23,11 @@ body {
     border: #7400b8;
 }
 
-#li {
+#ul {
     background-color: #CDB4DB;
+    list-style:disc;
+    list-style-image: url(img/frogpinkhat.png);
+
 }
 #startTime {
     background-color: #F94144;
