@@ -4,17 +4,24 @@ body {
     background-color: plum;
     margin: 0 auto;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Libre Baskerville', serif;
+    font-size: 20px;
     color: navy;
     text-align: center;
+    cursor:all-scroll;
 }
 
 /* Styles for wrapper div */
 #wrapper {
+    margin-top: 10px;
     background-color:beige;
     margin-left: 0%;
     padding-bottom: 50px;
+    padding-top: 20px;
 
 }
+
+
 
 #instructions {
     background-color: beige;

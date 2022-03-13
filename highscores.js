@@ -10,9 +10,12 @@ clear.addEventListener("click", function () {
     location.reload();
 });
 
+
 // Retrieve what was stored on local storage
 var allScores = localStorage.getItem("allScores");
 allScores = JSON.parse(allScores);
+
+
 
 if (allScores !== null) {
 
@@ -31,3 +34,5 @@ goBack.addEventListener("click", function () {
     window.location.replace("./index.html");
 }
 );
+
+

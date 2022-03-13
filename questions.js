@@ -3,38 +3,38 @@
 var questions = [
 {
     title: "How many countries are there in the world?",
-    choices: ["280, 150, 99, 195"],
+    choices: ["280", "150", "99", "195"],
     answer: "195"
 },
 {
     title: "What is the name of the current president of North Korea?",
-    choices: ["Kim Jong Il, Kim Il Sung, Kim Jong Un, Kim Jong Nam"],
+    choices: ["Kim Jong Il", "Kim Il Sung", "Kim Jong Un", "Kim Jong Nam"],
     answer: "Kim Jong Un",
 },
 {
     title: "What is 95 - 8?",
-    choices: ["90, 87, 83, 103"],
+    choices: ["90", "87", "83", "103"],
     answer: "87"
 },
 {
     title: "What is 7 * 8?",
-    choices: ["64, 58, 42, 56"],
+    choices: ["64", "58", "42", "56"],
     answer: "56"
 
 },
 {
 title: "What is cynophobia?",
-choices: ["Fear of cats, Fear of Dogs, Fear of Birds, Fear of Snakes"],
+choices: ["Fear of Cats", "Fear of Dogs", "Fear of Birds", "Fear of Snakes"],
 answer: "Fear of Dogs"
 },
 {
 title: "Which animal can be seen on the Porsche logo?",
-choices: ["Tiger, Eagle, Horse, Elephant"],
+choices: ["Tiger", "Eagle", "Horse", "Elephant"],
 answer: "Horse"
 },
 {
 title: "What is the name of the largest ocean on Earth?",
-choices: ["Pacific Ocean, Atlantic Ocean, Artic Ocean, Indian Ocean"],
+choices: ["Pacific Ocean", "Atlantic Ocean", "Artic Ocean", "Indian Ocean"],
 answer: "Pacific"
 },
 ];
@@ -205,34 +205,13 @@ function allDone() {
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
-            // Travels to final page
+            // Navigate user back to main page
             window.location.replace("./HighScores.html");
         }
     });
 
 }
 
-// NOTE we can only append question title only
-
-// then have answer appear after user has selected a response
-
-
-
-// Create an event to compare the user's response with the correct answer
-
-// Use if else statements to deduct time
-
-// Include a tally of questions answered?
-
-// Append last page
-
-
-// Event listener for user to enter initials to be entered into local storage
-// Local Storage to contain initials and score
-// Sort scores from highest to lowest using sort function
-
-
-// Navigate user back to main page
 
 // QUIZ COMPLETE
 
