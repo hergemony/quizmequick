@@ -1,5 +1,6 @@
 // Hergemony Quiz 
-// Create Var with array and object for questions 
+// First state all the variables involved in quiz
+// We will need a variable for the questions (array and object for questions) 
 var questions = [
 {
     title: "How many countries are there in the world?",
@@ -56,19 +57,14 @@ answer: "Pacific"
 
 ];
 
-// Declared variables
+// We will then need the following variables:
 var score = 0;
 var questionIndex = 0;
-
-// Start working code 
-// Declared variables
 var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
-
-// Seconds left is 15 seconds per question:
-var secondsLeft = 76;
+var secondsLeft = 80;
 // Holds interval time
 var holdInterval = 0;
 // Holds penalty time
@@ -76,9 +72,9 @@ var penalty = 10;
 // Creates new element
 var ulCreate = document.createElement("ul");
 
-// Triggers timer on button, shows user a display on the screen
+// We need to triggers the timer when the user clicks "Start Quiz" button and display timer on the screen
 timer.addEventListener("click", function () {
-    // We are checking zero because its originally set to zero
+    // We are checking zero because timer is originally set to zero
     if (holdInterval === 0) {
         holdInterval = setInterval(function () {
             secondsLeft--;
@@ -199,7 +195,8 @@ function allDone() {
 
     questionsDiv.appendChild(createSubmit);
 
-    // Event listener to capture initials and local storage for initials and score
+    // Add an Event listener to capture initials
+    // Create local storage for initials and score
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
 
@@ -222,7 +219,7 @@ function allDone() {
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
-            // Navigate user back to main page
+            // Navigate user back to the main page
             window.location.replace("./HighScores.html");
         }
     });
