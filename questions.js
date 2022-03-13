@@ -37,6 +37,23 @@ title: "What is the name of the largest ocean on Earth?",
 choices: ["Pacific Ocean", "Atlantic Ocean", "Artic Ocean", "Indian Ocean"],
 answer: "Pacific"
 },
+
+{
+    title: "What is the most consumed manufactured drink in the world?",
+    choices: ["Beer", "Coffee", "Wine", "Tea"],
+    answer: "Tea"
+},
+{
+    title: "From which country does Gouda cheese originate?",
+    choices: ["Portugal", "France", "Netherlands", "Belgium"],
+    answer: "Netherlands"
+},
+{
+    title: "How many teeth does an adult human have?",
+    choices: ["28","20", "32", "30"],
+    answer: "32"
+},
+
 ];
 
 // Declared variables
