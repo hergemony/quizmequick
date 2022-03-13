@@ -6,7 +6,7 @@ Welcome to this week's challenge!
 
 This is a timed quiz designed to test the user's ability to answer a set question from a randomised set of questions. 
 
-Questions are created by Hergemony and are of a general topics with the help of the following source:
+Questions are created by Hergemony™ and are of a variety of topics. They are compiled with the help of the following source:
 
 https://www.quizbreaker.com/trivia-questions
 

@@ -1,8 +1,10 @@
-// Hergemony Quiz
+// Hergemony Quiz - Scoreboard Page
 // Declare the variables
 var highScore = document.querySelector("#highScore");
 var clear = document.querySelector("#clear");
 var goBack = document.querySelector("#goBack");
+
+
 
 // Add Event Listeners to clear the scores
 clear.addEventListener("click", function () {
@@ -13,7 +15,6 @@ clear.addEventListener("click", function () {
 // Retrieve what was stored on local storage
 var allScores = localStorage.getItem("allScores");
 allScores = JSON.parse(allScores);
-
 
 if (allScores !== null) {
 

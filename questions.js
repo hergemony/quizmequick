@@ -1,6 +1,6 @@
 // Hergemony Quiz 
 // First state all the variables involved in quiz
-// We will need a variable for the questions (array and object for questions) 
+// We will need a variable for the questions (array and object for questions)(set 10 questions) 
 var questions = [
 {
     title: "How many countries are there in the world?",
@@ -21,7 +21,6 @@ var questions = [
     title: "What is 7 * 8?",
     choices: ["64", "58", "42", "56"],
     answer: "56"
-
 },
 {
 title: "What is cynophobia?",
@@ -57,28 +56,32 @@ answer: "Pacific"
 
 ];
 
-// We will then need the following variables:
+// We will then need the following variables, score to start from zero and no questions to begin with
 var score = 0;
 var questionIndex = 0;
+
+// Traverse the DOM and use querySelector to select specific id's (NB these id's have been set in the index.html)
 var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
+
+// Set a variable for length of the quiz, in this case 80 seconds is chosen
 var secondsLeft = 80;
-// Holds interval time
+// Set interval time
 var holdInterval = 0;
-// Holds penalty time
+// Holds penalty time (subtract 10 seconds per incorrect answer)
 var penalty = 10;
-// Creates new element
+// Create a new element to initiate quiz questions in the form of an unordered list...
 var ulCreate = document.createElement("ul");
 
-// We need to triggers the timer when the user clicks "Start Quiz" button and display timer on the screen
+// We need to trigger the timer when the user clicks "Start Quiz" button and display timer on screen for user 
 timer.addEventListener("click", function () {
     // We are checking zero because timer is originally set to zero
     if (holdInterval === 0) {
         holdInterval = setInterval(function () {
             secondsLeft--;
-            currentTime.textContent = "Time: " + secondsLeft;
+            currentTime.textContent = "Timer: " + secondsLeft;
 
             if (secondsLeft <= 0) {
                 clearInterval(holdInterval);
@@ -95,14 +98,14 @@ function render(questionIndex) {
     // Clears existing data 
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
-    // For loops to loop through all info in array
+    // Create For loops to loop through all info in array
     for (var i = 0; i < questions.length; i++) {
-        // Appends question title only
+        // Appends question title only followed by choices (answer concealed)
         var userQuestion = questions[questionIndex].title;
         var userChoices = questions[questionIndex].choices;
         questionsDiv.textContent = userQuestion;
     }
-    // New for each for question choices
+    // Create new For loop for upcoming question choices
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
@@ -111,7 +114,7 @@ function render(questionIndex) {
         listItem.addEventListener("click", (compare));
     })
 }
-// Event to compare choices with answer
+// Create an event to compare choices with answer, answer will appear after user clicks
 function compare(event) {
     var element = event.target;
 
@@ -125,7 +128,7 @@ function compare(event) {
             createDiv.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
             // Correct condition 
         } else {
-            // Will deduct -5 seconds off secondsLeft for wrong answers
+            // Will deduct -10 seconds off secondsLeft for wrong answers
             secondsLeft = secondsLeft - penalty;
             createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
         }
@@ -172,14 +175,14 @@ function allDone() {
         questionsDiv.appendChild(createP2);
     }
 
-    // Label
+    // Create Label where user will enter initials
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter your initials: ";
 
     questionsDiv.appendChild(createLabel);
 
-    // input
+    // Create input
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
@@ -187,7 +190,7 @@ function allDone() {
 
     questionsDiv.appendChild(createInput);
 
-    // submit
+    // Create submit button for the initials
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
@@ -196,7 +199,7 @@ function allDone() {
     questionsDiv.appendChild(createSubmit);
 
     // Add an Event listener to capture initials
-    // Create local storage for initials and score
+    // Then create local storage for initials and score (check using Inspect and Application on browser)
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
 
@@ -219,6 +222,11 @@ function allDone() {
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
+
+            // sort scores from highest to lowest???
+            //*TODO: need to figure out code for sort function
+
+            
             // Navigate user back to the main page
             window.location.replace("./HighScores.html");
         }
