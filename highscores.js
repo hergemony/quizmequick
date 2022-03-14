@@ -16,7 +16,7 @@ allScores = JSON.parse(allScores);
 
 if (allScores !== null) {
 
-
+// sort function added to rank scores from highest to lowest
   allScores.sort(function (a, b) {
       debugger;
     if (b.score > a.score) {

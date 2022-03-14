@@ -146,7 +146,7 @@ function compare(event) {
     questionIndex++;
 
     if (questionIndex >= questions.length) {
-        // All done will append last page with user stats
+        // Quiz done will append last page with user stats
         allDone();
         createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
     } else {
@@ -155,7 +155,7 @@ function compare(event) {
     questionsDiv.appendChild(createDiv);
 
 }
-// All done will append last page
+// Quiz done will append last page
 function allDone() {
     questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
@@ -173,7 +173,7 @@ function allDone() {
 
     questionsDiv.appendChild(createP);
 
-    // Calculates time remaining and replaces it with score
+    // Calculates time remaining (secondsLeft) which is then used as the score
     if (secondsLeft >= 0) {
         var createP2 = document.createElement("p");
         clearInterval(holdInterval);
