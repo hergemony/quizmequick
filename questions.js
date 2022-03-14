@@ -106,9 +106,17 @@ function render(questionIndex) {
         questionsDiv.textContent = userQuestion;
     }
     // Create new For loop for upcoming question choices
+    // Tutor assistance in adding small image from to list/bullet point style
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
-        listItem.textContent = newItem;
+        var img = document.createElement('img');
+        img.src = 'assets/frogsmall.png';
+        img.setAttribute('height', '30px');
+
+        listItem.append(img);
+        var span = document.createElement('span');
+        span.textContent = newItem;
+        listItem.append(span)
         questionsDiv.appendChild(ulCreate);
         ulCreate.appendChild(listItem);
         listItem.addEventListener("click", (compare));
@@ -155,7 +163,7 @@ function allDone() {
     // Heading:
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
-    createH1.textContent = "All Done!"
+    createH1.textContent = "Quiz Done!"
 
     questionsDiv.appendChild(createH1);
 
@@ -167,10 +175,9 @@ function allDone() {
 
     // Calculates time remaining and replaces it with score
     if (secondsLeft >= 0) {
-        var timeRemaining = secondsLeft;
         var createP2 = document.createElement("p");
         clearInterval(holdInterval);
-        createP.textContent = "Your final score is: " + timeRemaining;
+        createP.textContent = "Your final score is: " + secondsLeft;
 
         questionsDiv.appendChild(createP2);
     }
@@ -208,9 +215,10 @@ function allDone() {
             console.log("No value entered!");
 
         } else {
+            
             var finalScore = {
                 initials: initials,
-                score: timeRemaining
+                score: secondsLeft,
             }
             console.log(finalScore);
             var allScores = localStorage.getItem("allScores");
@@ -223,10 +231,7 @@ function allDone() {
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
 
-            // sort scores from highest to lowest???
-            //*TODO: need to figure out code for sort function
 
-            
             // Navigate user back to the main page
             window.location.replace("./HighScores.html");
         }

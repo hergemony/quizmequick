@@ -23,7 +23,7 @@ body {
     position: relative;
 }
 
-/* Need to change style for bullet points to make it look more like a quiz*/
+/* Need to change style for bullet points to make it look more like a quiz, check questions.js for img of frog insertion */
 
 li {
     background-color: #7400b8;
@@ -35,8 +35,6 @@ li {
     text-align: center;
     
 }
-
-ul { list-style-image: url(assets/frogfacesmall.png);}
 
 #startTime {
     background-color: #F94144;
