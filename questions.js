@@ -233,7 +233,7 @@ function allDone() {
 
 
             // Navigate user back to the main page
-            window.location.replace("./HighScores.html");
+            window.location.replace("./highscores.html");
         }
     });
 
