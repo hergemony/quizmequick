@@ -67,5 +67,3 @@ Deployed Application Link => https://hergemony.github.io/quizmequick/
 
 ❤ Hergemony™ Digital Services 2022 ❤
 
-Acknowledgments: The Teachers, Tutors and Team @ UWA CODING BOOTCAMP
-
